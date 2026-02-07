@@ -1,4 +1,4 @@
-//provider for azure check documentation for more details https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+//provider for azure check documentation 
 
 terraform {
   required_providers {
