@@ -16,7 +16,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Ì¥ê Azure Login using Service Principal
+      # ÔøΩÔøΩÔøΩ Azure Login using Service Principal
       - name: Azure Login
         uses: azure/login@v2
         with:
