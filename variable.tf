@@ -17,3 +17,7 @@ variable "vnet_name" {
   description = "The name of the Vnet"
     type        = string
 }
+variable "subscription_id" {
+  description = "The subscription ID for Azure"
+  type        = string
+}
