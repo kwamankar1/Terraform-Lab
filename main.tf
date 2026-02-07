@@ -1,6 +1,6 @@
 // Create resources in Azure using Terraform given in variable & values in tfvasrs file and free VM resource
 
-resource "azurerm resource_group" "rg" {
+resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
 }
