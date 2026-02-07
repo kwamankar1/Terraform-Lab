@@ -5,3 +5,8 @@
 *.tfstate.*
 *.tfvars
 .terraform.lock.hcl
+
+# SSH private keys (never commit)
+*.pem
+id_rsa
+id_rsa.pub

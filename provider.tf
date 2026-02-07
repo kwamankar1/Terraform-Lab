@@ -1,4 +1,4 @@
-//provider for azure
+//provider for azure check documentation 
 
 terraform {
   required_providers {
