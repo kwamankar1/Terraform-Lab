@@ -10,25 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
+      #  Checkout repository
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Terraform
+      # Setup Terraform
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.6.6
 
-      # 3️⃣ Terraform Init
+      #  Terraform Init
       - name: Terraform Init
         run: terraform init -input=false
 
-      # 4️⃣ Terraform Validate
+      #  Terraform Validate
       - name: Terraform Validate
         run: terraform validate
 
-      # 5️⃣ Terraform Plan
+      #  Terraform Plan
       - name: Terraform Plan
         run: terraform plan
 
