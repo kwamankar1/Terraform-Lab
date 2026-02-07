@@ -1,4 +1,3 @@
-//Deplyment pipeline for terraform code using github actions
 
 name: Terraform CD Apply
 
