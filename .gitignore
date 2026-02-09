@@ -3,7 +3,6 @@
 .terraform/
 *.tfstate
 *.tfstate.*
-*.tfvars
 .terraform.lock.hcl
 
 # SSH private keys (never commit)
