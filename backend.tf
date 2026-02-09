@@ -1,4 +1,4 @@
-// create backend.tf file to store the state file in Azure Storage Account
+// create backend.tf file to store the state file in Azure Storage Account.
 terraform {
   backend "azurerm" {
     resource_group_name   = "LabsKraft360"
