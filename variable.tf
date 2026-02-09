@@ -1,4 +1,4 @@
-//create variable for resource group name, location and ubuntu vm name
+//create variable for resource group name, location and ubuntu vm name.
 
 variable "resource_group_name" {}
 variable "location" {}
