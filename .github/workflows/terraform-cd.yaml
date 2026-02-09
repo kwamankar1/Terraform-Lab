@@ -1,18 +1,12 @@
-name: Terraform CI Plan
+
+name: Terraform CD Apply
 
 on:
-  pull_request:
+  push:
     branches: [ main ]
 
-concurrency:
-  group: terraform-${{ github.ref }}
-  cancel-in-progress: true
-
-permissions:
-  contents: read
-
 jobs:
-  terraform-plan:
+  terraform-apply:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +20,7 @@ jobs:
         with:
           terraform_version: 1.6.6
 
-      - name: Export Azure credentials
+      - name: Export ARM creds
         run: |
           echo "ARM_CLIENT_ID=${{ fromJson(secrets.AZURE_CREDENTIALS).clientId }}" >> $GITHUB_ENV
           echo "ARM_CLIENT_SECRET=${{ fromJson(secrets.AZURE_CREDENTIALS).clientSecret }}" >> $GITHUB_ENV
@@ -36,8 +30,5 @@ jobs:
       - name: Terraform Init
         run: terraform init -input=false
 
-      - name: Terraform Validate
-        run: terraform validate
-
-      - name: Terraform Plan
-        run: terraform plan
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
